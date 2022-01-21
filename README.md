@@ -50,6 +50,8 @@ within an object along with one byte past the end.
 > pointer support is limited and may require explicit care and acknowledgment
 > from a library to support.
 
+# Why this trait is needed
+
 All [primitive numeric types][primitive numeric type], including machine-dependent types, come with known size that can be obtained via [`core::mem::size_of<T>()`][core::mem::size_of]. The greater the size is, the greater the number of possible values that can be represented by the type. Integer intervals as sets are not [closed](https://en.wikipedia.org/wiki/Closure_(mathematics)) under many operations, notably addition and multiplication. Since `u8` represents the integer interval \[0..2<sup>8</sup>-1\], the same holds for this type. By analogy, the same is true for `u16`, `u32`, etc. Similarly, the set of values representable by floating point numbers with algebraic structure avoiding imprecision (i.e. distinct from the algebraic structure on floating point numbers) is not closed under many operations as well.
 
 One way to circumvent the problem is to use [type promotion]. [Type promotion][type promotion] allows to use a type representing a superset of the original type. For every [primitive numeric type] (except for `u128`, `i128`, and `f64`) there is a canonical [type promotion]. For `u8` the canonical [type promotion] is `u16`, for `i16` the canonical type promotion is [`i32`], and so on. Theoretically, one could go one step further and define `u256`, yet it would not be primitive and even simple operations on that type (such as addition) would not have corresponding CPU instructions.
