@@ -56,6 +56,8 @@ All [primitive numeric types][primitive numeric type], including machine-depende
 
 One way to circumvent the problem is to use [type promotion]. [Type promotion][type promotion] allows to use a type representing a superset of the original type. For every [primitive numeric type] (except for `u128`, `i128`, and `f64`) there is a canonical [type promotion]. For `u8` the canonical [type promotion] is `u16`, for `i16` the canonical type promotion is `i32`, and so on.
 
+## Signed integers
+
 Type   | Size     | Canonical type promotion | Size of promotion
 -------|----------|--------------------------|-------------------
 `i8`   | 1 byte   | `i16`                    | 2 bytes
@@ -64,6 +66,8 @@ Type   | Size     | Canonical type promotion | Size of promotion
 `i64`  | 8 bytes  | `i128`                   | 16 bytes
 `i128` | 16 bytes | **undefined**            | **undefined**
 
+## Unsigned integers
+
 Type   | Size     | Canonical type promotion | Size of promotion
 -------|----------|--------------------------|-------------------
 `u8`   | 1 byte   | `u16`                    | 2 bytes
@@ -71,6 +75,8 @@ Type   | Size     | Canonical type promotion | Size of promotion
 `u32`  | 4 bytes  | `u64`                    | 8 bytes
 `u64`  | 8 bytes  | `u128`                   | 16 bytes
 `u128` | 16 bytes | **undefined**            | **undefined**
+
+## Floating-point numbers
 
 Type   | Size     | Canonical type promotion | Size of promotion
 -------|----------|--------------------------|-------------------
