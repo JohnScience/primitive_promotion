@@ -63,12 +63,16 @@ Type   | Size     | Canonical type promotion | Size of promotion
 `i32`  | 4 bytes  | `i64`                    | 8 bytes
 `i64`  | 8 bytes  | `i128`                   | 16 bytes
 `i128` | 16 bytes | **undefined**            | **undefined**
+
+Type   | Size     | Canonical type promotion | Size of promotion
 -------|----------|--------------------------|-------------------
 `u8`   | 1 byte   | `u16`                    | 2 bytes
 `u16`  | 2 bytes  | `u32`                    | 4 bytes
 `u32`  | 4 bytes  | `u64`                    | 8 bytes
 `u64`  | 8 bytes  | `u128`                   | 16 bytes
 `u128` | 16 bytes | **undefined**            | **undefined**
+
+Type   | Size     | Canonical type promotion | Size of promotion
 -------|----------|--------------------------|-------------------
 `f32`  | 4 bytes  | `f64`                    | 8 bytes
 `f64`  | 8 bytes  | **undefined**            | **undefined**
