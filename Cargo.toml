@@ -1,13 +1,13 @@
 [package]
 name = "primitive_promotion"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Dmitrii Demenev <demenev.dmitriy1@gmail.com>"]
 edition = "2021"
 rust-version = "1.56.1" # https://github.com/foresterre/cargo-msrv
 description = "Primitive promotions for primitive numeric types: u16 for u8, i32 for i16, f64 for f32, etc"
-documentation = "https://docs.rs/primivite_promotion"
+documentation = "https://docs.rs/primitive_promotion"
 readme = "README.md"
-repository = "https://github.com/JohnScience/primivite_promotion"
+repository = "https://github.com/JohnScience/primitive_promotion"
 license = "MIT OR Apache-2.0"
 # license-file | not needed
 keywords = ["primitive", "promotion", "extension"]
